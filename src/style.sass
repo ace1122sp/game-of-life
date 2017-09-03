@@ -1,0 +1,274 @@
+*:focus
+  outline: none
+*
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important
+
+html, body
+  min-height: 100vh
+  margin: 0
+
+  body
+    background: linear-gradient(left top, #2f3031, #020e14)
+    body::-moz-focus-inner
+    border: 0
+
+    button::-moz-focus-inner
+      border: 0
+
+.body
+  min-height: 100vh
+  margin: 0
+  display: flex
+  flex-direction: column
+  align-items: center
+  font-family: 'Unica One', cursive
+
+  h1
+    margin: 33px auto
+    letter-spacing: 10px
+    font-size: 59px
+    font-family: 'Monoton', cursive
+    color: rgba(37, 172, 211, 0.9)
+    text-shadow: 0px 4px 6px rgb(136, 153, 161)
+    border-right: 2px solid rgba(37, 172, 211, 0.9)
+
+  button
+    border-style: none
+    font-family: 'Unica One', cursive
+    background: transparent
+    color: rgba(37, 172, 211, 0.9)
+    text-shadow: 0px 0px 6px rgb(136, 153, 161)
+
+#source-code
+  position: absolute
+  font-size: 1.2em
+  top: 10px
+  left: 50px
+  visibility: visible
+  transition: transform 300ms ease
+
+  a
+    text-decoration: none
+    color: rgba(37, 172, 211, 0.9)
+
+#source-code:hover
+  transform: scale(1.2)
+
+  a
+    color: rgba(37, 172, 211, 0.5)
+
+#source-code:active
+  a
+    color: black
+
+.cont
+  display: flex
+  flex-direction: row
+  padding-left: 1vw
+  padding-right: 1vw
+  margin-bottom: 20px
+
+.grid
+  margin: 10px
+  display: grid
+  grid-gap: 1px
+  grid-template-columns: repeat(50, 7.5px)
+  grid-template-rows: repeat(50, 7.5px)
+  box-shadow: 0px 0px 6px 5px rgba(34, 170, 210, 0.54)
+
+.g-field
+  background: gray
+
+.g-field:hover
+  cursor: pointer
+
+.D
+  background: black
+
+.L
+  background: rgba(37, 172, 211, 0.9)
+
+.B
+  background: rgba(37, 172, 211, 0.3)
+
+.aside
+  align-self: center
+  margin-left: 3vw
+  margin-right: 10px
+  padding: 20px
+
+.buttons
+  margin: 20px 0
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  opacity: 0
+  transition: opacity 300ms ease-in
+
+  button
+    font-size: 3vw
+    margin: 10px 5px
+    padding: 0
+
+  button:hover
+    cursor: pointer
+
+  button:active
+    color: black
+
+.command-room
+  margin: 10px 0
+  font-size: 4.5vw
+  display: flex
+  justify-content: center
+
+  button
+    margin: 0 3px
+    font-size: 3vw
+    animation: pulsing 700ms ease-in infinite
+    animation-direction: alternate
+    visibility: visible
+
+  button:hover
+    cursor: pointer
+
+  label
+    width: 12vw
+    border-top: 2px solid rgba(37, 172, 211, 0.9)
+    text-shadow: 0px 0px 2px rgba(37, 172, 211, 0.2)
+
+  label:first-of-type
+    border-right: 2px solid rgba(37, 172, 211, 0.9)
+
+  label:last-of-type
+    text-align: center
+    width: 16vw
+
+.semafors
+  margin: 10px 0
+  font-size: 4.5vw
+  display: flex
+  justify-content: center
+
+  label
+    border-top: 2px solid rgba(37, 172, 211, 0.9)
+    text-shadow: 0px 0px 2px rgba(37, 172, 211, 0.2)
+
+@keyframes pulsing
+  0%
+    transform: scale(1)
+
+  100%
+    transform: scale(1.2)
+
+@media (max-width: 861px)
+  .body
+    h1
+      margin: 23px auto
+      letter-spacing: 6px
+      font-size: 50px
+
+  .cont
+    flex-direction: column-reverse
+    padding-left: 1vw
+    padding-right: 1vw
+
+  .grid
+    margin: 15px auto
+
+  .aside
+    display: flex
+    flex-direction: row
+    align-self: center
+    margin-left: 5px
+    margin-right: 5px
+    padding: 10px
+
+  .buttons
+    margin: 10px 0
+    flex-direction: row
+    flex-wrap: nowrap
+
+  .command-room
+    font-size: 3vw
+    align-items: center
+
+  .semafors
+    font-size: 3vw
+    align-items: center
+
+    label:nth-last-of-type(1)
+      border-top: unset
+      margin-right: 15px
+
+@media (max-width: 639px)
+  #source-code
+    visibility: collapse
+
+  .body
+    h1
+      margin: 23px auto 6px
+      letter-spacing: 2px
+      font-size: 7vw
+
+  .cont
+    padding-left: 0
+    padding-right: 0
+
+  .grid
+    margin: auto
+
+  .aside
+    flex-wrap: wrap
+    justify-content: center
+
+  .buttons
+    margin: 0 0 15px
+    justify-content: center
+
+    button
+      font-size: 5vw
+      margin: 10px 15px
+      padding: 0
+
+  .command-room
+    font-size: 5vw
+    margin-top: 0
+    margin-bottom: 0
+
+    button
+      font-size: 46px
+
+    label
+      border-top: unset
+
+  .semafors
+    font-size: 5vw
+    margin-top: 0
+    margin-bottom: 0
+
+  .command-room
+    label:nth-of-type(1)
+      padding-right: 9px
+
+@media (max-width: 516px)
+  .body
+    h1
+      margin: 17px 0 6px
+
+  .grid
+    grid-template-columns: repeat(50, 4.6px)
+    grid-template-rows: repeat(50, 4.6px)
+
+  .aside
+    margin-left: 1.5px
+    margin-right: 1.5px
+    padding: 2px
+
+  .buttons
+    margin-bottom: 10px
+
+  .semafors
+    label:nth-of-type(1)
+      border-top: unset
+      margin-right: 9px
